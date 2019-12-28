@@ -10,7 +10,7 @@
 	border-left-color: #555753;
 	background-color: #555753;
 	color: #FFFFFF;
-	border-style: solid;
+	border-style: solid
 }
 
 /* layout.xhtml */
@@ -29,11 +29,11 @@ footer {
 	font-weight: bolder;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	padding-left: 30px;
+	padding-left: 30px
 }
 
 .bodymargin {
-	margin: 0;
+	margin: 0
 }
 .pg{
 	border-style:solid;
@@ -42,7 +42,7 @@ footer {
 	padding-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	background-color: #cccbcb;
+	background-color: #cccbcb
 }
 
 .cpg{
@@ -51,19 +51,17 @@ footer {
 	padding-left: 10px;
 	padding-right: 10px;
 	min-width: 100px;
-	background-color: #bbbaba;
+	background-color: #bbbaba
 }
 
 .iw{
 	width: 500px;
-	height: 30px;
+	height: 30px
 }
 .bw{
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
-	width: 100%;
-	
+	width: 100%
 }
-

@@ -28,6 +28,8 @@ public class Listener implements PhaseListener {
 	 */
 	@Override
 	public void afterPhase(PhaseEvent event) {
+		LOGGER.info("method afterPhase");
+
 		FacesContext context = FacesContext.getCurrentInstance();
 
 		if (context.getViewRoot().getViewId().equals("/index.xhtml")) {
