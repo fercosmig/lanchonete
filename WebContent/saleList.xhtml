@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/template/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<ui:define name="corpo">
+
+		<h:form>
+
+			<h:messages></h:messages>
+
+			<br />
+
+			<p:layout style="min-widht: 400px; min-height: 200px;">
+				<p:layoutUnit position="west">
+	clientes
+	</p:layoutUnit>
+				<p:layoutUnit position="center">
+	vendas
+	</p:layoutUnit>
+			</p:layout>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>

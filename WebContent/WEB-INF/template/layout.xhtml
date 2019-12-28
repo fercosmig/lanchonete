@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+	<h:outputStylesheet library="css" name="style.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title><ui:insert name="titulo">Lanchonete by .:: Fercosmig ::.</ui:insert></title>
+</h:head>
+
+<h:body styleClass="bodymargin">
+
+	<header>
+		<h:form>
+
+			<p:menubar>
+
+				<p:submenu label="#{lb.user.name}">
+					<p:menuitem update="messages" ajax="false" value="Sair"
+						action="#{lb.logout}" />
+				</p:submenu>
+
+				<p:menuitem update="messages" ajax="false" value="Home"
+					url="./home.xhtml" />
+
+				<p:submenu label="Clientes">
+					<p:menuitem update="messages" ajax="false" value="Lista"
+						url="./clientList.xhtml" />
+					<p:menuitem update="messages" ajax="false" value="Novo"
+						url="./clientNew.xhtml" />
+				</p:submenu>
+
+				<p:submenu label="Produtos">
+					<p:menuitem update="messages" ajax="false" value="Lista"
+						url="./productList.xhtml" />
+					<p:menuitem update="messages" ajax="false" value="Novo"
+						url="./productNew.xhtml" />
+				</p:submenu>
+
+				<p:submenu label="Vendas">
+					<p:menuitem update="messages" ajax="false" value="Comandas"
+						url="./saleList.xhtml" />
+				</p:submenu>
+
+				<p:submenu label="Usuários">
+					<p:menuitem update="messages" ajax="false" value="Lista"
+						url="./userList.xhtml" />
+					<p:menuitem update="messages" ajax="false" value="Novo"
+						url="./userNew.xhtml" />
+				</p:submenu>
+
+			</p:menubar>
+
+		</h:form>
+
+	</header>
+
+	<div id="conteudo">
+		<ui:insert name="corpo" />
+	</div>
+
+	<footer> Developed by .:: Fer Cos Mig ::. -
+		fercosmig@gmail.com - 11/2019 - 12/2019. </footer>
+</h:body>
+</html>

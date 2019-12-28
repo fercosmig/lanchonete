@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/template/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<ui:define name="corpo">
+
+		<p>
+			Seja bem vindo ao <i><b>"sistema de controle de vendas para
+					lanchonete"</b></i>
+		</p>
+
+		<br />
+
+		<p>Informações de login:</p>
+		<ul>
+			<li>Nome de usuário: #{lb.user.login}</li>
+			<li>Nome completo: #{lb.user.name}</li>
+			<li>E-mail: #{lb.user.email}</li>
+		</ul>
+
+		<br />
+
+		<h3>Sobre o sistema</h3>
+
+		<p>Sistema desenvolvido em ambiente Linux (Manjaro 18.1.4 + KDE
+			Plasma 5.17.4).</p>
+		<p>Tecnologias utilizadas:</p>
+		<ul>
+			<li>JAVA JDK 13</li>
+			<li>JSF - 2.2.20</li>
+			<li>Primefaces - 7.0</li>
+			<li>MariaDB - 10.4.10</li>
+			<li>Log4j 2 - 2.12.1</li>
+			<li>Servlet - 4.0.1</li>
+			<li>MySql connector - 8.0.18</li>
+			<li>Eclipse 2019-09 R (4.13.0)</li>
+		</ul>
+		<br />
+		<br />
+
+	</ui:define>
+</ui:composition>

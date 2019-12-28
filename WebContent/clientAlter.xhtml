@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/template/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<ui:define name="corpo">
+
+		<f:metadata>
+			<f:event type="preRenderView" listener="#{cli.retrieveById}" />
+		</f:metadata>
+
+		<h:form>
+			<h:messages></h:messages>
+
+			<h:panelGrid columns="2" styleClass="pg" columnClasses="cpg">
+
+				<f:facet name="header">
+					<h:outputText value="Alteração de cliente" />
+				</f:facet>
+				<h:outputLabel value="Id: " />
+				<h:inputText value="#{cli.client.id}" readonly="true" styleClass="iw" />
+
+				<h:outputLabel value="(*) Nome: " />
+				<h:inputText value="#{cli.client.name}" required="true"
+					requiredMessage="Nome é obrigatório" styleClass="iw" />
+
+				<h:outputLabel value="E-mail: " />
+				<h:inputText value="#{cli.client.email}" styleClass="iw" />
+
+				<h:outputLabel value="Telefone: " />
+				<h:inputText value="#{cli.client.phone}" styleClass="iw" />
+
+				<h:outputLabel value="Observações: " />
+				<h:inputText value="#{cli.client.notes}" styleClass="iw" />
+
+				<h:outputLabel value="Data de cadastro: " />
+				<h:inputText value="#{cli.client.registrationDate}" readonly="true" styleClass="iw" />
+				<f:facet name="footer">
+					<h:panelGroup>
+						<h:commandButton id="submit" value="Salvar"
+							action="#{cli.update}" styleClass="bw" />
+					</h:panelGroup>
+				</f:facet>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

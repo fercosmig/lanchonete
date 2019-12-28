@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<ui:composition template="/WEB-INF/template/layout.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+	<ui:define name="corpo">
+
+		<f:metadata>
+			<f:event type="preRenderView" listener="#{prod.retrieveById}" />
+		</f:metadata>
+
+		<h:form>
+			<h:panelGrid columns="2" styleClass="pg" columnClasses="cpg">
+
+				<f:facet name="header">
+					<h:outputText value="Alteração de produto" />
+				</f:facet>
+				<h:outputLabel value="Id: " />
+				<h:outputText value="#{prod.product.id}" styleClass="iw" />
+
+				<h:outputLabel value="(*) Descrição: " />
+				<h:inputText value="#{prod.product.description}" required="true"
+					requiredMessage="Produto é obrigatório" styleClass="iw" />
+
+				<h:outputLabel value="(*) Unidade: " />
+				<h:selectOneMenu value="#{prod.product.unit}" label="Unidade"
+					required="true" requiredMessage="Unidade é obrigatório"
+					styleClass="iw">
+					<f:selectItem itemLabel="Selecione" noSelectionOption="true" />
+					<f:selectItems value="#{prod.allUnits}" var="unit"
+						itemValue="#{unit}" itemLabel="#{unit.description}" />
+
+				</h:selectOneMenu>
+
+				<h:outputLabel value="Custo: " />
+				<h:inputText value="#{prod.product.cost}" styleClass="iw" />
+
+				<h:outputLabel value="(*) Preço: " />
+				<h:inputText value="#{prod.product.price}" required="true"
+					requiredMessage="Preço é pbrigatório." styleClass="iw" />
+
+				<h:outputLabel value="Data de cadastro: " />
+				<h:outputText value="#{prod.product.registrationDate}"
+					styleClass="iw" />
+				<f:facet name="footer">
+					<h:panelGroup>
+						<h:commandButton id="submit" value="Salvar"
+							action="#{prod.update}" styleClass="bw" />
+					</h:panelGroup>
+				</f:facet>
+			</h:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>
